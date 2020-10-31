@@ -25,8 +25,7 @@
 /var/log/messages
 {
 	rotate 4
-	daily
-#	weekly
+	weekly
 	missingok
 #	notifempty
 	compress
