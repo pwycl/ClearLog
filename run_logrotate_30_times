@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# before running it, you should track your /etc/logrotate.d/rsyslog, make sure 'notifempty' is commented
+# you should run it with sudo
+
+for ((i=0;i<30;i++));do
+    logrotate -f /etc/logrotate.conf
+done
+dmesg -c >> /dev/null
+
+# then you should delete the *.gz by your own
